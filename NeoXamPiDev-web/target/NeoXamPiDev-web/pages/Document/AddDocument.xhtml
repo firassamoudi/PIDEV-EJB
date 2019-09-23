@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml" xmlns:p="http://primefaces.org/ui">
+	<ui:param name="page_name" value="Connexion" />
+	<ui:param name="param_page" value="Ajouter Document" />
+
+	<ui:define name="ContainerPI">
+		<div class="row">
+			<div class="col-md-6 col-xl-4">
+				<div class="mini-stat clearfix bg-white">
+
+					<div class="mini-stat-info text-right text-muted">
+						<span class="counter text-danger">Attestation de travail </span>
+
+					</div>
+					<p class="mb-0 m-t-20 text-muted">
+
+						<p:button icon="ui-icon-plus"
+							title="traiter attestation de travail">
+							<f:param name="productId" value="30" />
+						</p:button>
+						<span class="pull-right"><i class="fa fa-caret-up m-r-5"></i>10.25%</span>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-xl-4">
+				<div class="mini-stat clearfix bg-success">
+
+					<div class="mini-stat-info text-right text-white">
+						<span class="counter text-white">Attestation de stage</span>
+
+					</div>
+					<p class="mb-0 m-t-20 text-light">
+						<p:button icon="ui-icon-plus" title="traiter attestation de stage">
+							<f:param name="productId" value="30" />
+						</p:button>
+						<span class="pull-right"><i class="fa fa-caret-up m-r-5"></i>10.25%</span>
+					</p>
+				</div>
+			</div>
+
+
+
+
+			<div class="col-md-6 col-xl-4">
+				<div class="mini-stat clearfix bg-white">
+
+					<div class="mini-stat-info text-right text-muted">
+						<span class="counter text-warning">Autorisation de conge</span>
+
+					</div>
+					<p class="mb-0 m-t-20 text-muted">
+						<p:button icon="ui-icon-plus"
+							title="traiter autorisation de conge">
+							<f:param name="productId" value="30" />
+						</p:button>
+						<span class="pull-right"><i class="fa fa-caret-up m-r-5"></i>10.25%</span>
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+		<h:form>
+
+
+			<div class="row">
+
+
+
+				<div class="col-md-12 col-xl-9">
+
+					<p:outputLabel for="directeur" value="Je soussigné Monsieur" />
+					<p:inputText id="directeur"
+						value="#{attestationDeTravailBean.directeur}" required="true"
+						label="directeur">
+						<f:validateLength minimum="2" />
+					</p:inputText>
+				</div>
+				<div class="col-md-12 col-xl-9">
+					<p:outputLabel for="qualite" value="agissant en qualité de" />
+					<p:inputText id="qualite"
+						value="#{attestationDeTravailBean.qualite}" required="true"
+						label="qualite">
+						<f:validateLength minimum="2" />
+					</p:inputText>
+				</div>
+						<div class="col-md-12 col-xl-9">
+				<h:selectOneMenu value="#{attestationDeTravailBean.cinn}">
+					<f:selectItem itemLabel="Choisir Employe" itemValue="" />
+					<f:selectItems value="#{attestationDeTravailBean.employes}" var="empl"
+						itemValue="#{empl.cin}" itemLabel="#{empl.nom}" />
+				</h:selectOneMenu>
+				</div>
+				<!-- 										<div class="col-md-12 col-xl-9"> -->
+				<!-- 											<p:outputLabel for="employee" -->
+				<!-- 												value="certifie que Monsieur" /> -->
+				<!-- 											<p:inputText id="employee" value="#{attestationDeTravailBean.employeee}" -->
+				<!-- 												required="true" label="employe"> -->
+				<!-- 												<f:validateLength minimum="2" /> -->
+				<!-- 											</p:inputText> -->
+				<!-- 										</div> -->
+
+
+
+				<div class="col-md-12 col-xl-9">
+					<h:commandButton value="Save"
+						action="#{attestationDeTravailBean.addDocumentAttestationDeTravail()}" />
+				</div>
+			</div>
+
+		</h:form>
+
+
+
+
+	</ui:define>
+
+</ui:composition>

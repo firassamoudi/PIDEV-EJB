@@ -1,0 +1,7 @@
+1-/ creer base donnee nommé neo3
+2-/ creer dataSource liee a cette Base de donnee nomme name :NeoDS3  jndi:java:/neods3
+3-/ placer le projet sous le repertoire sous apache : wamp sous www/NeoXamPiDev/clone ici le projet 
+						    : xamp sous htdocs/	NeoXamPiDev/clone ici le projet
+4-ouvrire le projet dans le JbossDev : menu File -> open project from file System
+
+4-run the project

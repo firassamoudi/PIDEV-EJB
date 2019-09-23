@@ -1,0 +1,16 @@
+tn\esprit\neoxam\managedbeans\LoginBean.class
+tn\esprit\neoxam\managedbeans\DepartementBean.class
+tn\esprit\neoxam\managedbeans\EmployeBean.class
+tn\esprit\neoxam\managedbeans\SuiviBean.class
+tn\esprit\neoxam\managedbeans\SendMailBean.class
+tn\esprit\neoxam\managedbeans\CandidatBean.class
+tn\esprit\neoxam\managedbeans\AjoutEquipeBean.class
+tn\esprit\neoxam\managedbeans\UserBean.class
+tn\esprit\neoxam\managedbeans\RecruterBean.class
+tn\esprit\neoxam\managedbeans\AttestationDeStageBean.class
+tn\esprit\neoxam\managedbeans\CompteEmployeeBean.class
+tn\esprit\neoxam\managedbeans\StatisticBean.class
+tn\esprit\neoxam\managedbeans\ReclamationBean.class
+tn\esprit\neoxam\managedbeans\ContratBean.class
+tn\esprit\neoxam\managedbeans\AttestationDeTravailBean.class
+tn\esprit\neoxam\managedbeans\AjoutProduitBean.class
